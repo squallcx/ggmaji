@@ -1,8 +1,7 @@
 {% if latest_hotel_list %}
     <ul>
     {% for hotel in latest_hotel_list %}
-        <li><a href="/{{ hotel.id }}/">{{ hotel.hotel_text }}</a></li>
-    {% endfor %}
+       <li><a href="{% url 'myshop:detail' hotel.id %}">{{ hotel.hotel_text }}</a></li>    {% endfor %}
     </ul>
 {% else %}
     <p>No polls are available.</p>
